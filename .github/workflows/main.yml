@@ -1,0 +1,19 @@
+name: cd
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: nikialeksey:pjsip-android-builder:latest
+    steps:
+      -
+        name: Download pjsip
+        run: |
+          cd /home/tools/
+          curl -L -# -o pjsip.tar.gz "https://github.com/pjsip/pjproject/archive/2.13.tar.gz"
+          tar xzf pjsip.tar.gz && rm -rf pjsip.tar.gz
+          mv pjproject* pjproject
+      -
+        name: Build
+        run: |
+          cd /home
+          ./build
