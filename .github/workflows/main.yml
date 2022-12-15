@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: nikialeksey:pjsip-android-builder:latest
+    container: nikialeksey/pjsip-android-builder:latest
     steps:
       -
         name: Download pjsip
