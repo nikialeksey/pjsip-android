@@ -16,6 +16,7 @@ jobs:
           cd /home/tools/
           curl -L -# -o pjsip.tar.gz "https://github.com/pjsip/pjproject/archive/2.13.tar.gz"
           tar xzf pjsip.tar.gz && rm -rf pjsip.tar.gz
+          ls
           mv pjproject* pjproject
       -
         name: Build
